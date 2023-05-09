@@ -22,7 +22,17 @@ const app = Vue.createApp({
 
 	methods: {
 		addTodo() {
-			console.log("sono qui");
+			const trimmedText = this.newTodoText.trim();
+			if (trimmedText.length < 5) {
+				this.error = "Il testo deve essere lungo almeno 5 caratteri.";
+				return;
+			}
+			this.todos.unshift({
+				text: trimmedText,
+				done: false,
+			});
+			this.newTodoText = "";
+			this.error = "";
 		},
 		toggleBarred(i) {
 			this.todos[i].done = !this.todos[i].done;
