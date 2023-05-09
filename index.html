@@ -21,6 +21,16 @@
 			<p class="title">Todo List</p>
 		</div>
 		<div id="container">
+			<form @submit.prevent="addTodo">
+				<input type="text" placeholder="Nuovo Todo" v-model="newTodoText">
+				<button>Aggiungi</button>
+			</form>
+			<ul class="todo-list">
+				<li v-for="(todo, index) in todos" :key="index" class="todo-item" :class="{'todo-barred': !todo.done}">
+					{{todo.text}}
+					<i class="todo-item fa-solid fa-xmark"></i>
+				</li>
+			</ul>
 
 		</div>
 	</main>

@@ -1,10 +1,12 @@
 const app = Vue.createApp({
 	data() {
 		return {
+			newTodoText: "",
+			error: "",
 			todos: [
 				{
 					text: "Elemento 1",
-					done: false,
+					done: true,
 				},
 				{
 					text: "Elemento 2",
