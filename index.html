@@ -26,9 +26,9 @@
 				<button>Aggiungi</button>
 			</form>
 			<ul class="todo-list">
-				<li v-for="(todo, index) in todos" :key="index" class="todo-item" :class="{'todo-barred': !todo.done}">
-					{{todo.text}}
-					<i class="todo-item fa-solid fa-xmark"></i>
+				<li v-for="(todo, index) in todos" :key="index" @click="toggleBarred(index)" class="todo-item">
+					<span :class="{'todo-barred': !todo.done}">{{todo.text}}</span>
+					<i @click="removeTodo(index)" class="fa-solid fa-xmark"></i>
 				</li>
 			</ul>
 

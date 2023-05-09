@@ -74,14 +74,12 @@ ul.todo-list {
 	margin: 0 auto;
 	width: 70%;
 	margin-top: 2rem;
-	/* text-align: left; */
 }
 
 li.todo-item {
 	font-weight: 300;
 	padding: 0.75rem 0;
 	position: relative;
-	/* padding-right: 30px; */
 	border-bottom: 1px solid #ddd;
 	display: flex;
 	align-items: center;
@@ -89,6 +87,6 @@ li.todo-item {
 	text-decoration: none;
 }
 
-li.todo-barred {
+.todo-barred {
 	text-decoration: line-through;
 }
